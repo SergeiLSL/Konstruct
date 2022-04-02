@@ -270,4 +270,70 @@
 	}
 }
 /*========= finish services ================================*/
-//================================================================================
+//======================================================================
+/*========= start contact ================================*/
+.contact {
+	position: relative;
+	margin: 0 auto;
+	// .contact__foto
+	&__foto {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	// .contact__image
+	&__image {
+		width: 100%;
+	}
+	// .contact__text
+	&__text {
+		position: absolute;
+		max-width: rem(350);
+		width: 100%;
+		left: 50%;
+		top: 35%;
+		transform: translate(-50%, -35%);
+		@include adaptiveValue("top", 35%, 15%);
+	}
+	// .contact__title
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		color: $colorblack;
+		//margin-bottom: rem(55);
+		line-height: math.div(36, 30);
+		letter-spacing: 0.05em;
+		@include adaptiveValue("font-size", 30, 18);
+		margin-bottom: rem(35);
+		@include adaptiveValue("margin-bottom", 35, 10);
+	}
+	// .contact__buttons
+	&__buttons {
+	}
+	// .contact__button
+	&__button {
+		display: inline-block;
+		font-size: rem(13);
+		line-height: math.div(15, 13);
+		letter-spacing: 0.5px;
+		color: $white;
+		background-color: $blue;
+		padding: rem(11) rem(29);
+		border: rem(1) solid $blue;
+		transition: background-color 0.3s ease 0s;
+		&:hover {
+			background-color: #04b7fe;
+			font-weight: 500;
+		}
+		@include adaptiveValue("font-size", 20, 10);
+		@media (max-width: $mobileSmall) {
+		}
+	}
+}
+/*========= finish services ================================*/
+//===============================================================
