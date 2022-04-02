@@ -1,3 +1,273 @@
 //====================================================================================================
+/*========= start about ================================*/
+.about {
+	background-color: $sait;
+	@include adaptiveValue("padding-top", 58, 30);
+	@include adaptiveValue("padding-bottom", 58, 30);
+	&__container {
+	}
+	// .story__body
+	&__body {
+	}
+	&__title {
+		position: relative;
+		text-align: center;
+		@include adaptiveValue("margin-bottom", 80, 40);
+		&:after {
+			content: "";
+			width: rem(50);
+			height: rem(2);
+			background-color: #00a4e5;
+			position: absolute;
+			left: 50%;
+			margin: 0 0 rem(-10) rem(-25);
+			bottom: 0;
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width:$mobile){
+			display: block; 
+		}
+	}
+	&__column {
+		color: #48555B;
+		letter-spacing: rem(0.1875);
+		// .story__column_info
+		&_info {
+			flex: 0 1 43.08%;
+			@media (max-width:$mobile){
+				flex: 1 1 100%; 
+			}
+		}
+		// .story__column_image
+		&_gallery {
+			flex: 0 1 48.94%;
+			@media (max-width:$mobile){
+				flex: 1 1 100%; 
+			}
+		}
+	}
+		// .story__column-title
+	&__column-title {
+			font-size: rem(20);
+			line-height: math.div(23, 20);
+			@include adaptiveValue("margin-bottom", 30, 15);
+			font-weight: 700;
+			span {
+				color: $blue;
+			}
+		}
+	// .story__column-text
+	&__column-text {
+		line-height: math.div(23, 13);
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 13, 16);
+			@include adaptiveValue("line-height", 23, 20);
+			@include adaptiveValue("margin-bottom", 30, 30);
+		}
+	}
+}
 
-//====================================================================================================
+.gallery {
+	// .gallery__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-10);
+		align-items: center;
+	}
+	// .gallery__column
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 0;
+		position: relative;
+		padding: 0 rem(10);
+		gap: rem(20);
+		padding-bottom: rem(20); 
+		@media (max-width:$mobile){
+			margin: 0 auto;
+			max-width: rem(350);
+			flex: 0 1 50%;
+		}
+		@media (max-width:$mobileSmall){
+			margin: 0 auto;
+			max-width: rem(350);
+			flex: 0 1 100%; 
+		}		
+	}
+	// .gallery__block
+	&__block {
+	}
+}
+
+.block-works {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	// .block-works__image
+	&__image {
+		width: 100%;
+	}
+	// .block-works__middle
+	&__middle {
+		max-width: rem(108);
+		@include adaptiveValue("width", 108, 10);
+		position: absolute;
+		top: rem(15);
+		left: rem(14);
+		text-align: start;
+	}
+	// .block-works__title
+	&__title {
+		color: #fff;
+		@include adaptiveValue("font-size", 24, 5);
+		line-height: math.div(29, 24);
+		font-weight: 600;
+		letter-spacing: rem(0.1875);
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 54, 27);
+		}
+		@media (max-width:$mobileSmall){
+			@include adaptiveValue("font-size", 54, 54);
+		}
+	}
+}
+/*========= finish about ================================*/
+//========================================================================
+/*========= start services ================================*/
+.sevices {
+	background-color: $sait;
+	@include adaptiveValue("padding-top", 60, 30);
+	@include adaptiveValue("padding-bottom", 40, 30);
+	// .sevices__container
+	&__container {
+	}
+	// .sevices__content
+	&__content {
+	}
+	// .sevices__begins
+	&__begins {
+		
+		@include adaptiveValue("margin-bottom", 78, 40);
+	}
+	// .sevices__body
+	&__body {
+		// .sevices__body_card
+		&_card {
+		}
+	}
+}
+
+.begins {
+	display: flex;
+	color: #48555B;
+	align-items: center;
+	text-align: start;
+	justify-content:space-between;
+	@media (max-width:$mobileSmall){
+		display: block;
+		.begins__title {
+			margin-bottom: rem(30);
+		}
+		.begins__desc {
+			margin-bottom: rem(20);
+		}
+	}
+	// .begins__title
+	&__title {
+		@include adaptiveValue("margin-right", 154, 0);
+		&:after {
+			content: "";
+			width: rem(50);
+			height: rem(2);
+			background-color: $blue; // Цвет шрифта по умолчанию
+			position: absolute;
+			left: 0;
+			margin: 0 0 rem(-10) rem(0);
+			bottom: 0;
+		}
+	}
+	// .begins__desc
+	&__desc {
+	//margin: 0 auto;
+	max-width: rem(405);
+	font-size: rem(11);
+	line-height: math.div(19, 11);
+	letter-spacing: rem(0.2);
+	@include adaptiveValue("margin-right", 30, 20);
+	}
+	// .begins__button
+	&__button {	
+	}
+}
+
+.card {
+	// .card__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-13.5);
+	}
+	// .card__column
+	// .sevices__column
+	&__column {
+		position: relative;
+		padding: 0 13.5px;
+		flex: 0 1 33.333%; /*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
+		display: flex; /*колонки становятся одинаковые по высоте - по самой высокой*/
+		padding-bottom: rem(20); 
+		@media (max-width:$mobile){
+			margin: 0 auto;
+			max-width: rem(350);
+			flex: 0 1 50%;
+		}
+		@media (max-width:$mobileSmall){
+			margin: 0 auto;
+			max-width: rem(350);
+			flex: 0 1 100%; 
+		}
+	}
+	// .sevices__item
+	&__item {
+		display: block;
+		box-sizing: border-box;
+		margin: 0 auto;
+		background: #FFFFFF;
+		border: 1px solid #E6E6E6;
+		color: #48555B;
+		padding: rem(38) rem(22);
+	}
+	// .sevices__icon
+	&__icon {
+		max-width: rem(62);
+		max-height: rem(71);
+		margin-bottom: rem(25);
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .sevices__subtitle
+	&__subtitle {
+		font-size: rem(16);
+		line-height: math.div(24, 16);
+		letter-spacing: rem(0.426667);
+		font-weight: 700;
+		margin-bottom: rem(13);
+	}
+	// .sevices__text
+	&__text {
+		flex: 1 1 auto; /*чтобы прибить кнопку к низу позволим блоку с текстом увеличиваться*/
+		font-size: rem(13);
+		line-height: math.div(23, 16);
+		letter-spacing: rem(0.1875);
+	}
+}
+/*========= finish services ================================*/
+//================================================================================

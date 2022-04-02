@@ -1,1 +1,41 @@
 // Заголовки, общие БЄМ блоки и проче...
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+	display: inline-block;
+	font-size: rem(13);
+	line-height: math.div(15, 13);
+	letter-spacing: 0.5px;
+	color: #fff;
+	background-color: $blue;
+	padding: rem(11) rem(29);
+	border: rem(1) solid $blue;
+	transition: background-color 0.3s ease 0s;
+	&:hover {
+		background-color: #04b7fe;
+		font-weight: 500;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(12) rem(15);		
+	}
+}
+
+//===============================================
+.title {
+	position: relative;
+	font-size: rem(18);
+	line-height: math.div(21, 18);
+	font-weight: 700;
+	letter-spacing: rem(2.30625);
+	&:after {
+		content: "";
+		width: rem(50);
+		height: rem(2);
+		background-color: #00a4e5;
+		position: absolute;
+		left: 50%;
+		margin: 0 0 rem(-10) rem(-25);
+		bottom: 0;
+	}
+}
+
+//===============================================
