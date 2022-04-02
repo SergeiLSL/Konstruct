@@ -1,12 +1,21 @@
 //====================================================================================================
 .header {
+	position: relative;	
+	margin: 0 rem(-15);	
 	// .header__foto
 	&__foto {
-		position: relative;
+		///position: relative;		
 	}
 	&__logo {
 		position: absolute;
+		width: rem(102);
+		height: rem(23);
 		width: 100%;
+		//margin-top: rem(125);	
+		left: 50%;
+		top: 5%;
+		//transform: translate(-5%, -50%);
+		z-index: 5;
 	}
 	// .header__image
 	&__bg {
@@ -23,13 +32,15 @@
 		top: 83.5%;
 		transform: translate(-50%, -83.5%);
 		@include adaptiveValue("top", 83.5, 20%);
+		padding: 0 rem(15);	
 	}
 	// .header__title
 	&__title {
 		font-family: "Abhaya Libre";
 		line-height: math.div(71, 60);
 		letter-spacing: rem(5.70937);
-		@include adaptiveValue("font-size", 60, 26);
+		//margin: 0 rem(15);
+		@include adaptiveValue("font-size", 60, 24);
 	}
 	&__desc {
 		font-size: rem(16);
