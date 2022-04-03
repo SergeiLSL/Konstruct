@@ -39,3 +39,10 @@
 }
 
 //===============================================
+.subtitle {
+	font-size: rem(11);
+	line-height: math.div(13, 11);
+	letter-spacing: 0.85px;
+	text-transform: uppercase;
+	margin-bottom: rem(15);
+}
