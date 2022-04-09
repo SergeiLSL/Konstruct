@@ -49,6 +49,7 @@
 		font-family: "Abhaya Libre";
 		line-height: math.div(71, 60);
 		letter-spacing: rem(5.70937);
+		margin-bottom: rem(3);
 		@include adaptiveValue("font-size", 60, 21);
 		@media (max-width:$mobileSmall){
 			font-size: rem(30);
@@ -57,24 +58,24 @@
 
 	}
 	&__desc {
-		position: absolute;
-		left: 50%;
-		top: 60%;
-		transform: translate(-50%, -60%);
-		width: 100%;
+		//position: absolute;
+		//left: 50%;
+		//top: 60%;
+		//transform: translate(-50%, -60%);
+		//width: 100%;
 		font-size: rem(16);
 		line-height: math.div(19, 16);
 		padding: 0 rem(15);
 		@include adaptiveValue("font-size", 16, 10);
 		@media (max-width:$mobile){
-			left: 50%;
-			top: 65%;
-			transform: translate(-50%, -65%); 
+			//left: 50%;
+			//top: 65%;
+			//transform: translate(-50%, -65%); 
 		}
 		@media (max-width:$mobileSmall){
-			left: 50%;
-			top: 68%;
-			transform: translate(-50%, -68%); 
+			//left: 50%;
+			//top: 68%;
+			//transform: translate(-50%, -68%); 
 		}
 	}
 	&__down {
