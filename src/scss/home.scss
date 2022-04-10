@@ -10,19 +10,8 @@
 	&__body {
 	}
 	&__title {
-		position: relative;
 		text-align: center;
 		@include adaptiveValue("margin-bottom", 80, 40);
-		&:after {
-			content: "";
-			width: rem(50);
-			height: rem(2);
-			background-color: #00a4e5;
-			position: absolute;
-			left: 50%;
-			margin: 0 0 rem(-10) rem(-25);
-			bottom: 0;
-		}
 	}
 	&__row {
 		display: flex;
@@ -33,7 +22,7 @@
 		}
 	}
 	&__column {
-		color: #48555B;
+		color: $colorblack;
 		letter-spacing: rem(0.1875);
 		// .story__column_info
 		&_info {
@@ -138,24 +127,23 @@
 /*========= finish about ================================*/
 //========================================================================
 /*========= start services ================================*/
-.sevices {
+.services {
 	background-color: $sait;
 	@include adaptiveValue("padding-top", 60, 30);
 	@include adaptiveValue("padding-bottom", 40, 30);
-	// .sevices__container
+	// .services__container
 	&__container {
 	}
-	// .sevices__content
+	// .services__content
 	&__content {
 	}
-	// .sevices__begins
-	&__begins {
-		
+	// .services__begins
+	&__begins {		
 		@include adaptiveValue("margin-bottom", 78, 40);
 	}
-	// .sevices__body
+	// .services__body
 	&__body {
-		// .sevices__body_card
+		// .services__body_card
 		&_card {
 		}
 	}
@@ -163,7 +151,6 @@
 
 .begins {
 	display: flex;
-	color: #48555B;
 	align-items: center;
 	text-align: start;
 	justify-content:space-between;
@@ -181,13 +168,9 @@
 		@include adaptiveValue("margin-right", 154, 0);
 		&:after {
 			content: "";
-			width: rem(50);
-			height: rem(2);
-			background-color: $blue; // Цвет шрифта по умолчанию
 			position: absolute;
 			left: 0;
 			margin: 0 0 rem(-10) rem(0);
-			bottom: 0;
 		}
 	}
 	// .begins__desc
@@ -212,7 +195,7 @@
 		margin: 0 rem(-13.5);
 	}
 	// .card__column
-	// .sevices__column
+	// .services__column
 	&__column {
 		position: relative;
 		padding: 0 13.5px;
@@ -230,7 +213,7 @@
 			flex: 0 1 100%; 
 		}
 	}
-	// .sevices__item
+	// .services__item
 	&__item {
 		display: block;
 		box-sizing: border-box;
@@ -240,7 +223,7 @@
 		color: #48555B;
 		padding: rem(38) rem(22);
 	}
-	// .sevices__icon
+	// .services__icon
 	&__icon {
 		max-width: rem(62);
 		max-height: rem(71);
@@ -253,7 +236,7 @@
 			height: 100%;
 		}
 	}
-	// .sevices__subtitle
+	// .services__subtitle
 	&__subtitle {
 		font-size: rem(16);
 		line-height: math.div(24, 16);
@@ -261,7 +244,7 @@
 		font-weight: 700;
 		margin-bottom: rem(13);
 	}
-	// .sevices__text
+	// .services__text
 	&__text {
 		flex: 1 1 auto; /*чтобы прибить кнопку к низу позволим блоку с текстом увеличиваться*/
 		font-size: rem(13);
@@ -338,201 +321,5 @@
 /*========= finish services ================================*/
 //===============================================================
 /*========= start info ================================*/
-.info {
-	color: $white;
-	background: $saitBottom;
-	@include adaptiveValue("padding-bottom", 50, 25);
-	// .footer__container
-	&__container {
-	}
-	// .info__form
-	&__form {
-		@include adaptiveValue("margin-bottom", 71, 35);
-	}
-	// .footer__row
-	&__row {
-		display: flex;
-	}
-	// .footer__company
-	&__company {
-		flex: 0 1 math.div(940, 250);
-		width: 100%;
-		max-width: rem(250);
-		@include adaptiveValue("margin-right", 71, -30);
-	}
-	// .footer__links
-	&__links {
-		flex: 0 1 math.div(940, 262);
-		width: 100%;
-		max-width: rem(262);
-		@include adaptiveValue("margin-right", 58, -20);
-	}
-	// .footer__contact
-	&__contact {
-		flex: 0 1 math.div(940, 141);
-		width: 100%;
-		max-width: rem(141);		
-		@include adaptiveValue("margin-right", 46, -20);
-		@include adaptiveValue("max-width", 141, 100);
-	}
-	// .footer__social
-	&__social {
-		flex: 0 1 auto;
-		width: 100%;
-		max-width: rem(100);
-		@include adaptiveValue("max-width", 100, 20);
-		@media (max-width:$tablet){
-			//max-width: rem(25);
-			//text-align: center;
-		}
-	}
-	&__bottom {
-		text-align: center;
-	}
-	&__text {
-		font-size: rem(11);
-		line-height: math.div(13, 11);
-		letter-spacing: rem(0.846154);
-	}
-}
-//+++++++++++++++++++++
-.form * { 
-	outline: none;
-}
-.form {
-	//@at-root: center;
-	// .form__body
-	&__body {
-		@include adaptiveValue("padding-top", 30, 15);
-		@include adaptiveValue("padding-bottom", 30, 15);
-		display: flex;
-		align-items: center;
-		justify-content: center;		
-	}
-	// .form__item
-	&__item {
-	}
-	// .form__text
-	&__text {
-		font-size: rem(22);
-		line-height: math.div(16, 22);
-		letter-spacing: 0.846154px;
-		@include adaptiveValue("margin-right", 70, 10);
-	}
-	// .form__input
-	&__input {
-		font-size: rem(14);
-		line-height: math.div(16, 16);
-		letter-spacing: rem(0.07);
-		height: rem(40);
-		padding-left: rem(16);
-		width: rem(250);
-		transition: all 0.5s ease 0s;
-		&:focus {
-			box-shadow: 0 0 15px #7a956b;
-		}
-	}
-	&__input._error { // уточнить почему не работает
-		//box-shadow: 0 0 15px red;
-	}
-	// .form__button
-	&__button {
-		font-size: rem(13);
-		line-height: math.div(15, 13);
-		letter-spacing: 0.5px;
-		padding: rem(11) rem(49);
-		height: rem(40);
-		text-transform: uppercase;
-		border: none;
-	}
-}
-//++++++++++++++++
-.company {
-	// .company__title
-	&__subtitle {
-	}
-	// .company__logo
-	&__logo {
-		position: relative;
-		//height: rem(55);
-		width: 100%;
-		img {
-			height: rem(23);
-			margin-bottom: rem(19);
-		}
-	}
-	// .company__text
-	&__text {
-		font-size: rem(11);
-		line-height: math.div(19, 11);
-		letter-spacing: 0.85px;
-	}
-}
-//+++++++++++++++
-.links {
-	font-size: rem(11);
-	line-height: math.div(25, 11);
-	letter-spacing: rem(0.846154);
-	// .links__row
-	&__row {
-		display: flex;
-		justify-content: space-between;
-	}
-	// .links__item
-	&__item {
-	}
-}
-//+++++++++++++++
-.contact {
-	font-size: rem(11);
-	line-height: math.div(16, 11);
-	letter-spacing: rem(0.846154);
-	// .contact__subtitle
-	&__subtitle {
-	}
-	// .contact__address
-	&__address {
-		@include adaptiveValue("margin-bottom", 20, 10);
-	}
-	// .contact__tel
-	&__tel {
-		@include adaptiveValue("margin-bottom", 24, 12);
-	}
-	// .contact__mail
-	&__mail {		
-	}
-}
-//++++++++++++++++
-.social {
-	&__subtitle {
-		color: $saitBottom;
-	}
-	// .social__row
-	&__row {
-		display: flex;
-		justify-content: space-between;	
-		flex-wrap: wrap;
-		//@include adaptiveValue("gap", 24, 10);
-		@media (max-width:$tablet){
-			//display: block;
-		}	
-	}
-	// .social__item
-	&__item {
-		@media (max-width:$tablet){
-			margin-bottom: rem(15);
-		}
-	}
-	// .social__column
-	&__logo {
-		position: relative;
-		//height: rem(55);
-		width: 100%;
-		img {
-			height: rem(12);
-			margin-bottom: rem(12);
-		}
-	}
-}
 
 /*========= finish info ================================*/

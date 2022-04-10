@@ -18,9 +18,9 @@
 		padding: rem(12) rem(15);		
 	}
 }
-
 //===============================================
 .title {
+	color: $colorblack;
 	position: relative;
 	font-size: rem(18);
 	line-height: math.div(21, 18);
@@ -30,14 +30,13 @@
 		content: "";
 		width: rem(50);
 		height: rem(2);
-		background-color: #00a4e5;
+		background-color: $blue;
 		position: absolute;
 		left: 50%;
 		margin: 0 0 rem(-10) rem(-25);
 		bottom: 0;
 	}
 }
-
 //===============================================
 .subtitle {
 	font-size: rem(11);
@@ -45,4 +44,21 @@
 	letter-spacing: 0.85px;
 	text-transform: uppercase;
 	margin-bottom: rem(15);
+}
+
+//===============================================
+.ibg{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	img {
+		display: none;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
 }
