@@ -254,11 +254,11 @@
 }
 /*========= finish services ================================*/
 //======================================================================
-/*========= start contact ================================*/
-.contact {
+/*========= start contacts ================================*/
+.contacts {
 	position: relative;
 	margin: 0 auto;
-	// .contact__foto
+	// .contacts__foto
 	&__foto {
 		position: relative;
 		width: 100%;
@@ -269,11 +269,11 @@
 		background-repeat: no-repeat;
 		text-align: center;
 	}
-	// .contact__image
+	// .contacts__image
 	&__image {
 		width: 100%;
 	}
-	// .contact__text
+	// .contacts__text
 	&__text {
 		position: absolute;
 		max-width: rem(350);
@@ -283,7 +283,7 @@
 		transform: translate(-50%, -35%);
 		@include adaptiveValue("top", 35%, 15%);
 	}
-	// .contact__title
+	// .contacts__title
 	&__title {
 		text-align: center;
 		font-weight: 700;
@@ -295,10 +295,10 @@
 		margin-bottom: rem(35);
 		@include adaptiveValue("margin-bottom", 35, 10);
 	}
-	// .contact__buttons
+	// .contacts__buttons
 	&__buttons {
 	}
-	// .contact__button
+	// .contacts__button
 	&__button {
 		display: inline-block;
 		font-size: rem(13);

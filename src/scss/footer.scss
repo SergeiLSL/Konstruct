@@ -1,5 +1,6 @@
 //====================================================================================================
 //====================================================================================================
+
 .footer {
 	color: $white;
 	background: $saitBottom;
@@ -10,7 +11,7 @@
 	// .footer__form
 	&__form {
 		background: #171819;
-		@include adaptiveValue("padding-top", 30, 15);
+		padding-top: rem(30);
 		@include adaptiveValue("padding-bottom", 30, 15);			
 	}
 	// .info__all
