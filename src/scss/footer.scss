@@ -1,32 +1,28 @@
 //====================================================================================================
-//====================================================================================================
-
 .footer {
 	color: $white;
-	background: $saitBottom;
-	//@include adaptiveValue("padding-bottom", 50, 25);
-	// .footer__container
-	&__container {
-	}
+	background: #141A20;
 	// .footer__form
 	&__form {
-		background: #171819;
+		background: $saitBottom;
 		padding-top: rem(30);
-		@include adaptiveValue("padding-bottom", 30, 15);			
+		@include adaptiveValue("padding-bottom", 30, 15);		
 	}
-	// .info__all
+	// .footer__all
 	&__all {
-		background: #141A20;
 		@include adaptiveValue("padding-top", 50, 25);
 		@include adaptiveValue("padding-bottom", 50, 25);
 	}
-	// .info__copyright	
+	// .footer__container
+	&__container {
+	}
+	// .footer__copyright
 	&__copyright {
 		display: flex;
 		text-align: center;
-		background: #171819;
+		background: $saitBottom;
 		@include adaptiveValue("padding-top", 22, 15);
-		@include adaptiveValue("padding-bottom", 22, 15);		
+		@include adaptiveValue("padding-bottom", 22, 15);	
 	}
 	// .footer__text
 	&__text {
@@ -133,7 +129,7 @@
 			@include adaptiveValue("column-gap", 46, -10);
 			@media (max-width:$mobile){
 				flex: 1 1 rem(287);
-				column-gap: rem(46);
+				//column-gap: rem(46);
 				justify-content: center;
 			}
 		}
@@ -198,6 +194,10 @@
 	}
 	// .links__item
 	&__item {
+		a:hover {
+			text-decoration: underline;
+			text-shadow: 1px 1px 1px #fff;
+		}
 	}
 }
 
@@ -256,6 +256,14 @@
 }
 
 //========++++++++++++++
-//===========================================
-
 //====================================================================================================
+
+
+
+
+
+
+
+
+
+
