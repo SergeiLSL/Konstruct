@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+	//margin-top: rem(100); // исскуственный отступ
 	position: relative;
 	text-align: center;
 	color: #fff;
@@ -62,7 +63,6 @@
 		letter-spacing: rem(3.7);
 		text-transform: uppercase;
 		padding: rem(10);
-		@include adaptiveValue("font-size", 11, 10);
 	}
 }
 //====================================================================================================

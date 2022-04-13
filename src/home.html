@@ -7,7 +7,28 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">
+		<main class="page" data-sticky>
+			<section data-lp class="navig" data-sticky-item>
+				<div class="navig__container ">
+					<a href="" class="navig__logo"><img src="@img/navig/logo.svg" alt="logo"></a>
+					<div class="navig__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<!--? time 26:00 смотрим https://www.youtube.com/watch?v=zs1r8yafTE8-->
+								<!--? для плавного перехода по ссылкам создадим класс data-goto-->
+								<!--? ЧИАТАЕМ ДОКУМЕНТАЦИЮ ЧЕРТОГОВ ВНИМАТЕЛЬНО.txt-->
+								<!--? Раскоментировать в файле app.js пункты 153 и 159.txt-->
+								<li><a data-goto=".header" href="#" class="menu__link">Home</a></li>
+								<li><a data-goto=".about" href="#" class="menu__link">About</a></li>
+								<li><a data-goto=".services" href="#" class="menu__link">Services</a></li>
+								<li><a data-goto=".work" href="#" class="menu__link">Work</a></li>
+								<li><a data-goto=".contact" href="#" class="menu__link">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="menu__icon icon-menu"><span></span></div>
+				</div>
+			</section>
 
 			<section data-watch="navigator" class="about">
 				<div class="about__container">
@@ -61,6 +82,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section data-watch="navigator" class="services">
 				<div class="services__container">
 					<div class="services__content">
@@ -114,13 +136,14 @@
 					</div>
 				</div>
 			</section>
-			<section data-watch="navigator" class="contacts">
-				<div class="contacts__foto">
-					<img src="@img/contacts/bg.jpg" class="contacts__image" alt="cover">
-					<div class="contacts__text">
-						<h1 class="contacts__title">Want to build something amazing?</h1>
-						<div class="contacts__buttons">
-							<a data-popup="#popup" href="" class="contacts__button button">GET IN TOUCH</a>
+
+			<section data-watch="navigator" class="work">
+				<div class="work__foto">
+					<img src="@img/work/bg.jpg" class="work__image" alt="cover">
+					<div class="work__text">
+						<h1 class="work__title">Want to build something amazing?</h1>
+						<div class="work__buttons">
+							<a data-popup="#popup" href="" class="work__button button">GET IN TOUCH</a>
 						</div>
 					</div>
 				</div>
