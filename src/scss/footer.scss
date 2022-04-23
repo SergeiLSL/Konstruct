@@ -243,14 +243,19 @@
 			margin-bottom: rem(15);
 		}
 	}
+	&__logos {
+		font-size: rem(13);
+		color: #fff;
+	}
+
 	// .social__column
 	&__logo {
-		position: relative;
+		//position: relative;
 		//height: rem(55);
-		width: 100%;
+		//width: 100%;
 		img {
-			height: rem(12);
-			margin-bottom: rem(12);
+			//height: rem(12);
+			//margin-bottom: rem(12);
 		}
 	}
 }
